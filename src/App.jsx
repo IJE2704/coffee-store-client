@@ -1,9 +1,11 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { useLoaderData } from 'react-router-dom';
 import CoffeeCart from './Components/CoffeeCart';
 
 const App = () => {
-  const coffees = useLoaderData();
+  const loadedCoffes = useLoaderData();
+  const [coffees, setCoffees] =useState(loadedCoffes);
+
   
   return (
     <div>
@@ -13,6 +15,8 @@ const App = () => {
         coffees.map(coffee => <CoffeeCart
         key={coffee._id}
         coffee = {coffee}
+        coffees = {coffees}
+        setCoffees = {setCoffees}
         ></CoffeeCart>)
       }
     </div>
