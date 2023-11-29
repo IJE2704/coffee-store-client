@@ -43,10 +43,10 @@ const CoffeeCart = ({ coffee }) => {
         </div>
         <div className="text-center">
           <h2 className="card-title">{name}</h2>
-          <p>{chef}</p>
-          <p>{supplier}</p>
-          <p>{taste}</p>
-          <p>{category}</p>
+          <p>chef: {chef}</p>
+          <p>Supplier: {supplier}</p>
+          <p>Taste :{taste}</p>
+          <p>Category: {category}</p>
         </div>
         <div className="card-actions flex flex-col justify-around">
           <button className="btn btn-square btn-outline">view</button>
